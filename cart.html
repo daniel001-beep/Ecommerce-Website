@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - RedStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html" class="cart-icon">
+                <img src="images/cart.png" width="30px" height="30px">
+                <span class="cart-count" id="cart-count">0</span>
+            </a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+
+    <div class="cart-container">
+        <div class="cart-header">
+            <h1><i class="fas fa-shopping-cart"></i> Your Shopping Cart</h1>
+            <p>Review your items and proceed to checkout</p>
+        </div>
+
+        <div id="empty-cart-message" class="empty-cart">
+            <i class="fas fa-shopping-cart"></i>
+            <h3>Your cart is empty</h3>
+            <p>Looks like you haven't added anything to your cart yet. Start shopping to find amazing products!</p>
+            <a href="product.html" class="btn"><i class="fas fa-shopping-bag"></i> Start Shopping</a>
+        </div>
+
+        <div class="cart-layout" id="cart-content" style="display: none;">
+            <div class="cart-items-container">
+                <div class="cart-items-header">
+                    <h2><i class="fas fa-box"></i> Cart Items (<span id="item-count">0</span>)</h2>
+                    <button id="clear-cart-btn" class="clear-cart-btn">
+                        <i class="fas fa-trash"></i> Clear Cart
+                    </button>
+                </div>
+                
+                <div class="cart-items" id="cart-items">
+                    <!-- Cart items will be dynamically inserted here -->
+                </div>
+            </div>
+
+            <div class="order-summary">
+                <div class="summary-card">
+                    <h3><i class="fas fa-receipt"></i> Order Summary</h3>
+                    
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="cart-subtotal">$0.00</span>
+                    </div>
+                    
+                    <div class="summary-row shipping">
+                        <span>Shipping</span>
+                        <span id="shipping-cost">$10.00</span>
+                    </div>
+                    
+                    <div class="summary-row tax">
+                        <span>Tax (10%)</span>
+                        <span id="tax-amount">$0.00</span>
+                    </div>
+                    
+                    <div class="savings-badge" style="display: none;">
+                        Add $100 more for FREE shipping!
+                    </div>
+                    
+                    <div class="summary-divider"></div>
+                    
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span id="cart-total">$0.00</span>
+                    </div>
+                    
+                    <button class="checkout-btn">
+                        <i class="fas fa-lock"></i> Proceed to Checkout
+                    </button>
+                    
+                    <div class="continue-shopping">
+                        <a href="product.html">
+                            <i class="fas fa-arrow-left"></i> Continue Shopping
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="promo-section">
+                    <h4>Have a promo code?</h4>
+                    <div class="promo-input">
+                        <input type="text" placeholder="Enter promo code">
+                        <button class="apply-promo-btn">Apply</button>
+                    </div>
+                    <div class="promo-suggestions">
+                        <span class="promo-tag">WELCOME10</span>
+                        <span class="promo-tag">SAVE20</span>
+                        <span class="promo-tag">FREESHIP</span>
+                    </div>
+                </div>
+                
+                <div class="security-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <strong>Secure & Safe Checkout</strong><br>
+                        30-day return policy • Free shipping over $100 • SSL encrypted
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png" alt="Logo">
+                    <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Sports Accessible to Many.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61571380449874&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@danieid4?_t=ZS-90a4BczKc9H&_r=1"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/danielidowu18?igsh=dXYzcHU3Y281dXls"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/2347011755321?text=yourmessage"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col-4">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

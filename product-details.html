@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - RedStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+
+    <div class="small-container single-product">
+        <div class="row">
+            <div class="col-2">
+                <!-- Main image will be loaded by JavaScript -->
+                <div class="image-loading" id="main-image-loading">
+                    <div class="loading-spinner"></div>
+                </div>
+                <img src="" width="100%" id="productimg" style="display: none;">
+                
+                <div class="small-img-row">
+                    <div class="small-img-col">
+                        <div class="small-loading"></div>
+                        <img src="" width="100%" class="small-img" style="display: none;">
+                    </div>
+                    <div class="small-img-col">
+                        <div class="small-loading"></div>
+                        <img src="" width="100%" class="small-img" style="display: none;">
+                    </div>
+                    <div class="small-img-col">
+                        <div class="small-loading"></div>
+                        <img src="" width="100%" class="small-img" style="display: none;">
+                    </div>
+                    <div class="small-img-col">
+                        <div class="small-loading"></div>
+                        <img src="" width="100%" class="small-img" style="display: none;">
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <p id="breadcrumb">Home / Products</p>
+                <h1 id="product-title">Product Details</h1>
+                <h4 id="product-price">$0.00</h4>
+                <select id="size-select">
+                    <option>Select Size</option>
+                </select>
+                <input type="number" value="1" id="quantity" min="1">
+                <a href="" class="btn" id="add-to-cart">Add To Cart</a>
+                <h3>Product Details <i class="fa fa-indent"></i></h3>
+                <br>
+                <p id="product-description">Select a product to view its details and features.</p>
+                
+                <div id="product-features">
+                    <h4>Key Features:</h4>
+                    <ul id="features-list">
+                        <li>Feature details will appear here</li>
+                        <li>Click a product from the shop to view</li>
+                        <li>All information will load automatically</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="small-container">
+        <div class="row row-2">
+            <h2>Related Products</h2>
+            <a href="product.html"><p>View More</p></a>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <a href="product-details.html?product=9">
+                    <img src="images/product-9.jpg">
+                    <h4>Smart Fitness Watch</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p>$50.00</p>
+                </a>
+            </div>
+
+            <div class="col-4">
+                <a href="product-details.html?product=8">
+                    <img src="images/product-8.jpg">
+                    <h4>Fashion Sports Watch</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p>$50.00</p>
+                </a>
+            </div>
+
+            <div class="col-4">
+                <a href="product-details.html?product=10">
+                    <img src="images/product-10.jpg">
+                    <h4>Advanced Running Shoes</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                    </div>
+                    <p>$50.00</p>
+                </a>
+            </div>
+
+            <div class="col-4">
+                <a href="product-details.html?product=11">
+                    <img src="images/product-11.jpg">
+                    <h4>Performance Sports Socks</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p>$50.00</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png" alt="Logo">
+                    <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Sports Accessible to Many.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61571380449874&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@danieid4?_t=ZS-90a4BczKc9H&_r=1"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/danielidowu18?igsh=dXYzcHU3Y281dXls"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/2347011755321?text=yourmessage"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col-4">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="product-details.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
