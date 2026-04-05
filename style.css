@@ -323,54 +323,146 @@ select:focus{
     color: #fff;
 }
 
-/* --- STYLES FOR PRODUCT DETAILS PAGE --- */
+/* --- STYLES FOR PRODUCT DETAILS PAGE (PREMIUM FIX) --- */
 .single-product{
-    margin-top: 80px;
-    color: #000;
+    margin-top: 40px; /* Brought it up slightly for better mobile view */
+    color: #333;
 }
 .single-product .col-2 img{
     padding: 0;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05); /* Soft shadow on product image */
 }
 .single-product .col-2{
     padding: 20px;
 }
-.single-product h4{
-    margin: 20px 0;
-    font-size: 22px;
-    font-weight: bold;
+.single-product h1 {
+    font-size: 32px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    color: #111;
+    font-weight: 700;
 }
+.single-product h4{
+    margin: 15px 0 25px 0;
+    font-size: 26px;
+    font-weight: bold;
+    color: #ff523b; /* Makes the price pop in your brand color */
+}
+
+/* Dropdown Styling */
 .single-product select{
     display: block;
-    padding: 10px;
-    margin-top: 20px;
-    border: 1px solid #ff523b;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 250px;
+    font-size: 16px;
+    font-family: inherit;
+    color: #555;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
+.single-product select:focus{
+    outline: none;
+    border-color: #ff523b;
+}
+
+/* Quantity Input Styling */
 .single-product input{
-    width: 50px;
-    height: 40px;
-    padding-left: 10px;
-    font-size: 20px;
-    margin-right: 10px;
-    border: 1px solid #ff523b;
-    border-radius: 3px;
+    display: inline-block;
+    width: 70px;
+    height: 50px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    text-align: center;
+    vertical-align: middle;
+    color: #333;
+    transition: all 0.3s ease;
 }
 .single-product input:focus{
     outline: none;
+    border-color: #ff523b;
+}
+
+/* Premium Button Styling */
+.single-product .btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff523b, #ff6b4a); /* Vibrant gradient */
+    color: #fff;
+    margin: 0 0 20px 0;
+    padding: 14px 40px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    vertical-align: middle;
+    box-shadow: 0 8px 25px rgba(255, 82, 59, 0.35); /* Glowing shadow */
+    border: none;
+    transition: all 0.3s ease;
+}
+.single-product .btn:hover{
+    background: #e0412a;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(255, 82, 59, 0.45);
+}
+
+/* Description Typography */
+.single-product h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #111;
 }
 .single-product .fa{
     color: #ff523b;
-   margin-left: 10px;
 }
-.single-product .btn{
-    margin: 10px 0;
+.single-product p{
+    color: #555;
+    line-height: 1.8; /* Better readability */
+    font-size: 15px;
+    margin-bottom: 20px;
 }
+
+/* Image Gallery Layout */
 .small-img-row{
     display: flex;
     justify-content: space-between;
+    margin-top: 15px;
 }
 .small-img-col{
-    flex-basis: 24%;
+    flex-basis: 23%;
     cursor: pointer;
+}
+.small-img-col img {
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+.small-img-col img:hover {
+    transform: scale(1.05);
+}
+
+/* Mobile Adjustments for Product Page */
+@media only screen and (max-width: 600px) {
+    .single-product input {
+        width: calc(30% - 15px); /* Share space with button */
+    }
+    .single-product .btn {
+        width: 70%; /* Fills the rest of the line perfectly */
+        padding: 14px 20px;
+    }
 }
 
 /* --- Mobile Responsive Fixes & Checkout Layout --- */
