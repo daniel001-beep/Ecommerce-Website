@@ -372,6 +372,51 @@ select:focus{
     flex-basis: 24%;
     cursor: pointer;
 }
+/* --- Mobile Responsive Fixes --- */
+
+/* 1. Stack the Form and Summary vertically on mobile */
+@media only screen and (max-width: 700px) {
+    .checkout-layout {
+        flex-direction: column; /* Stacks the Order Summary below the Form */
+    }
+
+    .checkout-form, .order-summary {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    /* 2. Stack First/Last Name and City/ZIP vertically */
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-row .form-group {
+        flex-basis: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    /* 3. Make inputs and buttons full-width for easier tapping */
+    input, select, .btn {
+        width: 100%;
+        font-size: 16px; /* Prevents iOS from auto-zooming on focus */
+        padding: 12px;  /* Larger tap targets */
+    }
+
+    .place-order-btn {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* 4. Adjust padding so it doesn't feel cramped */
+    .small-container {
+        padding: 10px;
+    }
+    
+    .checkout-header h1 {
+        font-size: 24px;
+    }
+}
 
 /* ===== NEW CART DESIGN ===== */
 .cart-container {
