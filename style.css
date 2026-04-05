@@ -372,12 +372,68 @@ select:focus{
     flex-basis: 24%;
     cursor: pointer;
 }
-/* --- Mobile Responsive Fixes --- */
+
+/* --- Mobile Responsive Fixes & Checkout Layout --- */
+
+/* Desktop Checkout Layout */
+.checkout-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.checkout-form {
+    flex: 1;
+}
+
+.order-summary {
+    flex-basis: 400px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+.payment-option input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #ff523b;
+}
 
 /* 1. Stack the Form and Summary vertically on mobile */
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
     .checkout-layout {
-        flex-direction: column; /* Stacks the Order Summary below the Form */
+        flex-direction: column-reverse; /* Stacks the Order Summary ABOVE the Form */
     }
 
     .checkout-form, .order-summary {
@@ -388,6 +444,7 @@ select:focus{
     /* 2. Stack First/Last Name and City/ZIP vertically */
     .form-row {
         flex-direction: column;
+        gap: 0;
     }
 
     .form-row .form-group {
@@ -400,11 +457,14 @@ select:focus{
     input, select, .btn {
         width: 100%;
         font-size: 16px; /* Prevents iOS from auto-zooming on focus */
+    }
+    
+    .form-group input, .form-group select, .place-order-btn {
+        height: 45px;
         padding: 12px;  /* Larger tap targets */
     }
 
     .place-order-btn {
-        width: 100%;
         margin-top: 20px;
     }
 
@@ -415,6 +475,7 @@ select:focus{
     
     .checkout-header h1 {
         font-size: 24px;
+        text-align: center;
     }
 }
 
